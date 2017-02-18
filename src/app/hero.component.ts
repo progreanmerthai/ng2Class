@@ -1,8 +1,16 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero';
+import { HEROES } from './mock.heroes'
+
 @Component({
-    selector: 'hero',
-    template: `<h1>Progreanmer</h1>`
+    selector: 'app-hero',
+    templateUrl: '/.hero.component.html',
+    styleUrls: ['./hero.component.css']
 })
 
-export class HeroComponent { }
+export class HeroComponent {
+    title: string = 'สวัสดีชาวโลก';
+    hero: Hero = { id: 1, name: 'Progreanmer' };
+    heroes: Hero[] = HEROES;
+}
 
